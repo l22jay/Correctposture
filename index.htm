@@ -1,16 +1,16 @@
 <html>
 <head>
-<title>ì¸ê³µì§€ëŠ¥ ë°”ë¥¸ ìžì„¸ íŒë…ê¸°</title>
-<h1>ì¸ê³µì§€ëŠ¥ ë°”ë¥¸ ìžì„¸ íŒë…ê¸°</h1>
+<title>ÀÎ°øÁö´É ¹Ù¸¥ ÀÚ¼¼ ÆÇµ¶±â</title>
+<h1>ÀÎ°øÁö´É ¹Ù¸¥ ÀÚ¼¼ ÆÇµ¶±â</h1>
 <hr>
-<h2>ì¸ê³µì§€ëŠ¥ ìžì„¸ íŒë…ê¸°ëŠ” ì¸ê³µì§€ëŠ¥ ê¸°ìˆ ì„ ì‚¬ìš©í•˜ì—¬<br>ì‚¬ìš©ìžì˜ ìžì„¸ê°€ ë°”ë¥¸ì§€ í™•ì¸í•˜ì—¬ ì¤ë‹ˆë‹¤.</h2>
-<h3>ì¹´ë©”ë¼ë¥¼ ì‚¬ìš©ìžì˜ ê°€ìŠ´ ë¶€ë¶„ê¹Œì§€ ë‚˜ì˜¤ê²Œ ìž¡ì€ í›„ 'ì‹œìž‘'ë²„íŠ¼ì„ ëˆ„ë¥´ì‹­ì‹œì˜¤.</h3>
+<h2>ÀÎ°øÁö´É ÀÚ¼¼ ÆÇµ¶±â´Â ÀÎ°øÁö´É ±â¼úÀ» »ç¿ëÇÏ¿©<br>»ç¿ëÀÚÀÇ ÀÚ¼¼°¡ ¹Ù¸¥Áö È®ÀÎÇÏ¿© ÁÝ´Ï´Ù.</h2>
+<h3>Ä«¸Þ¶ó¸¦ »ç¿ëÀÚÀÇ °¡½¿ ºÎºÐ±îÁö ³ª¿À°Ô ÀâÀº ÈÄ '½ÃÀÛ'¹öÆ°À» ´©¸£½Ê½Ã¿À.</h3>
 <hr>
 </head>
 <body style="background-image:url('bg.bmp')">
 <link rel="stylesheet" href="style.css">
 
-<button type="button" onclick="init()">ì‹œìž‘</button>
+<button type="button" onclick="init()">½ÃÀÛ</button>
 <p>
 <div id="webcam-container"></div>
 <div id="label-container"></div>
@@ -55,14 +55,14 @@
         const prediction = await model.predict(webcam.canvas);
         
         // Class 1 and Class 2 probabilities
-        const class1Probability = prediction[0].probability; // Class 1: ë°”ë¥¸ ìžì„¸
-        const class2Probability = prediction[1].probability; // Class 2: ë°”ë¥´ì§€ ì•Šì€ ìžì„¸
+        const class1Probability = prediction[0].probability; // Class 1: ¹Ù¸¥ ÀÚ¼¼
+        const class2Probability = prediction[1].probability; // Class 2: ¹Ù¸£Áö ¾ÊÀº ÀÚ¼¼
 
         // Show result based on which class has higher probability
         if (class1Probability > class2Probability) {
-            labelContainer.innerHTML = "<br><h2>ë°”ë¥¸ ìžì„¸</h2>";
+            labelContainer.innerHTML = "<br><h2>¹Ù¸¥ ÀÚ¼¼</h2>";
         } else {
-            labelContainer.innerHTML = "<br><h2>ë°”ë¥´ì§€ ì•Šì€ ìžì„¸</h2>";
+            labelContainer.innerHTML = "<br><h2>¹Ù¸£Áö ¾ÊÀº ÀÚ¼¼</h2>";
         }
     }
 </script>
